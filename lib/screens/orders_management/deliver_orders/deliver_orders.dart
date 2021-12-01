@@ -3,8 +3,8 @@ import 'package:driver_app/general_commponent/default_button.dart';
 import 'package:driver_app/presentation/resourses/assets_manager.dart';
 import 'package:driver_app/presentation/resourses/color_manager.dart';
 import 'package:driver_app/presentation/resourses/styles_manager.dart';
+import 'package:driver_app/screens/maps/shopper_delivery_location.dart';
 import 'package:driver_app/screens/orders_management/deliver_orders/delivery_page.dart';
-import 'package:driver_app/screens/orders_management/deliver_orders/monaola_page.dart';
 import 'package:driver_app/widgets/border_container_light.dart';
 import 'package:driver_app/widgets/custom_stepper.dart';
 import 'package:driver_app/widgets/custom_toggle_buttons.dart';
@@ -92,14 +92,20 @@ class _ShopperIdentity extends StatelessWidget {
         imagePath: 'asset/images/store_owner.png');
   }
 
-  Row _actions() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        buildIcon(ImageAssets.phoneIcon),
-        buildIcon(ImageAssets.mapIcon),
-      ],
-    );
+  Widget _actions() {
+    return Builder(builder: (context) {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          buildIcon(ImageAssets.phoneIcon),
+          InkWell(
+              onTap: () {
+                To(context, ShopperDeliveryLocation());
+              },
+              child: buildIcon(ImageAssets.mapIcon)),
+        ],
+      );
+    });
   }
 
   Widget _shopperDetails() {

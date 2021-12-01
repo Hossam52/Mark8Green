@@ -1,4 +1,6 @@
 import 'package:driver_app/general_commponent/default_button.dart';
+import 'package:driver_app/presentation/resourses/color_manager.dart';
+import 'package:driver_app/presentation/resourses/styles_manager.dart';
 import 'package:flutter/material.dart';
 
 class CoverProfileImage extends StatelessWidget {
@@ -10,7 +12,8 @@ class CoverProfileImage extends StatelessWidget {
       this.radius = 70,
       this.startWidget,
       this.endWidget,
-      this.changeProfilePictures = false})
+      this.changeProfilePictures = false,
+      this.id})
       : super(key: key);
   final String coverImagePath;
   final String profileImagePath;
@@ -20,6 +23,7 @@ class CoverProfileImage extends StatelessWidget {
   final Widget? startWidget;
   final Widget? endWidget;
   final bool changeProfilePictures;
+  final String? id;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -83,7 +87,8 @@ class CoverProfileImage extends StatelessWidget {
               ),
             ),
           ),
-          if (changeProfilePictures) _changeCoverButton()
+          if (changeProfilePictures) _changeCoverButton(),
+          if (id != null) _idContainer(),
         ],
       ),
     );
@@ -116,6 +121,34 @@ class CoverProfileImage extends StatelessWidget {
                 ),
               ),
               onPressed: () {},
+            ),
+          ),
+        );
+      }),
+    );
+  }
+
+  Widget _idContainer() {
+    final double buttonHeight = 30;
+    return Positioned(
+      bottom: radius - (buttonHeight / 2),
+      right: 0,
+      child: Builder(builder: (context) {
+        return FittedBox(
+          child: Container(
+            decoration: BoxDecoration(
+                color: ColorManager.buttonColor,
+                borderRadius: BorderRadius.circular(8)),
+            margin: const EdgeInsets.symmetric(horizontal: 10),
+            width: MediaQuery.of(context).size.width * 0.25,
+            height: buttonHeight,
+            child: Center(
+              child: FittedBox(
+                child: Text(
+                  id!,
+                  style: getRegularStyle(color: Colors.white),
+                ),
+              ),
             ),
           ),
         );

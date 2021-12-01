@@ -3,7 +3,6 @@ import 'package:driver_app/general_commponent/default_button.dart';
 import 'package:driver_app/presentation/resourses/assets_manager.dart';
 import 'package:driver_app/presentation/resourses/color_manager.dart';
 import 'package:driver_app/presentation/resourses/styles_manager.dart';
-import 'package:driver_app/screens/profiles/personal/edit_personal_profile.dart';
 import 'package:driver_app/widgets/cancel_Item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

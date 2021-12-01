@@ -7,6 +7,7 @@ import 'package:driver_app/screens/profiles/driver_profile/driver_profile_manage
 import 'package:driver_app/screens/profiles/personal/profile_screen.dart';
 import 'package:driver_app/screens/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -55,6 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 _currentTab = index;
               }),
           showUnselectedLabels: true,
+          selectedFontSize: 13.sp,
+          unselectedFontSize: 13.sp,
           selectedIconTheme:
               IconThemeData(color: Theme.of(context).colorScheme.primary),
           items: [

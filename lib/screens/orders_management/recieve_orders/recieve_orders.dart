@@ -1,9 +1,11 @@
 import 'dart:math';
 
 import 'package:driver_app/general_commponent/colors.dart';
+import 'package:driver_app/general_commponent/components.dart';
 import 'package:driver_app/general_commponent/default_button.dart';
 import 'package:driver_app/presentation/resourses/color_manager.dart';
 import 'package:driver_app/presentation/resourses/styles_manager.dart';
+import 'package:driver_app/screens/order_details/order_details_management.dart';
 import 'package:driver_app/widgets/border_container_light.dart';
 import 'package:driver_app/widgets/card_widget.dart';
 import 'package:driver_app/widgets/custom_stepper.dart';
@@ -114,7 +116,9 @@ class _ShopperIdentity extends StatelessWidget {
             flex: 3,
             child: DefaultButton(
               horizontalMargin: 10,
-              onPressed: () {},
+              onPressed: () {
+                To(context, OrderDetailsManagement());
+              },
               text: 'Order details',
               background: Theme.of(context).primaryColor,
             ),

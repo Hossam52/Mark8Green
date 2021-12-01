@@ -1,3 +1,4 @@
+import 'package:driver_app/presentation/resourses/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -13,8 +14,9 @@ class IndicatorWidget extends StatelessWidget {
     return SmoothPageIndicator(
       effect: WormEffect(
           activeDotColor: Theme.of(context).primaryColor,
-          dotHeight: 15.h,
-          dotWidth: 15.h),
+          dotColor: ColorManager.buttonColor,
+          dotHeight: 12.h,
+          dotWidth: 12.h),
       controller: pageController,
       count: count,
     );

@@ -25,7 +25,8 @@ class DriverProfileManagement extends StatelessWidget {
             coverImagePath: driverInfo.coverImagePath,
             detailsTable: getDriverInformation,
             showBackButton: false,
-            showNotificationButton: true),
+            showNotificationButton: true,
+            showDiscription: false),
       ),
       StoreProfileScreen(
           profileData: ProfileDataConfigs(

@@ -37,6 +37,7 @@ dependencies:
   date_picker_timeline: ^1.2.3
   smooth_page_indicator: ^1.0.0+2
   device_preview: ^0.8.0
+  intl: any
 
 dev_dependencies:
   flutter_test:

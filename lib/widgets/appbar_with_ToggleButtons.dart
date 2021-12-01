@@ -5,7 +5,7 @@ class AppBarWithToggleButtons extends StatelessWidget {
   const AppBarWithToggleButtons({Key? key, required this.toggleButtons})
       : super(key: key);
   final double toggleHeight = 65;
-  final CustomToggleButtons toggleButtons;
+  final Widget toggleButtons;
   @override
   Widget build(BuildContext context) {
     final appBar = AppBar();
