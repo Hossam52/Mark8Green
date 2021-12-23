@@ -1,8 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:driver_app/screens/delivery_management/week_missions.dart';
 import 'package:driver_app/screens/delivery_management/today_work.dart';
-import 'package:driver_app/widgets/appbar_with_ToggleButtons.dart';
-import 'package:driver_app/widgets/custom_toggle_buttons.dart';
-import 'package:flutter/material.dart';
+import 'package:common_widgets/appbar_with_toggle_buttons.dart';
+import 'package:common_widgets/custom_toggle_buttons.dart';
 
 class DeliveryManagement extends StatefulWidget {
   DeliveryManagement({Key? key}) : super(key: key);

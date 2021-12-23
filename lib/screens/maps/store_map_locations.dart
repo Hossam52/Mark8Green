@@ -1,13 +1,5 @@
-import 'package:driver_app/general_commponent/components.dart';
-import 'package:driver_app/general_commponent/default_button.dart';
-import 'package:driver_app/presentation/resourses/color_manager.dart';
-import 'package:driver_app/presentation/resourses/styles_manager.dart';
-import 'package:driver_app/presentation/resourses/values.dart';
-import 'package:driver_app/screens/profiles/store_profiles/store_profile_management.dart';
-import 'package:driver_app/widgets/card_widget.dart';
-import 'package:driver_app/widgets/custom_toggle_buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:driver_app/presentation/resourses/styles_manager.dart';
 
 class StoreMapLocation extends StatelessWidget {
   const StoreMapLocation({Key? key}) : super(key: key);

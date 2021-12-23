@@ -1,12 +1,9 @@
-import 'package:driver_app/general_commponent/colors.dart';
-import 'package:driver_app/general_commponent/default_button.dart';
+import 'package:flutter/material.dart';
 import 'package:driver_app/screens/orders_management/recieve_orders/recieve_orders.dart';
 import 'package:driver_app/screens/orders_management/collect_orders/collect_orders.dart';
 import 'package:driver_app/screens/orders_management/deliver_orders/deliver_orders.dart';
-import 'package:driver_app/widgets/appbar_with_ToggleButtons.dart';
-import 'package:driver_app/widgets/custom_toggle_buttons.dart';
-import 'package:driver_app/widgets/image_rounded.dart';
-import 'package:flutter/material.dart';
+import 'package:common_widgets/appbar_with_toggle_buttons.dart';
+import 'package:common_widgets/custom_toggle_buttons.dart';
 
 class OrdersManagement extends StatefulWidget {
   OrdersManagement({Key? key}) : super(key: key);

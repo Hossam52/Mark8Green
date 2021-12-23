@@ -1,13 +1,11 @@
-import 'package:driver_app/general_commponent/components.dart';
-import 'package:driver_app/models/morag3at_model.dart';
+import 'package:flutter/material.dart';
 import 'package:driver_app/models/review_model.dart';
 import 'package:driver_app/screens/profiles/driver_profile/driver_reviews.dart';
-import 'package:driver_app/widgets/morag3at.dart';
-import 'package:driver_app/screens/profiles/store_profiles/reviews.dart';
-import 'package:driver_app/widgets/card_widget.dart';
-import 'package:driver_app/widgets/custom_toggle_buttons.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+// import 'package:driver_app/widgets/morag3at.dart';
+// import 'package:driver_app/widgets/custom_toggle_buttons.dart';
+import 'package:common_widgets/morag3at.dart';
+import 'package:common_widgets/custom_toggle_buttons.dart';
+import 'package:common_widgets/morag3at_model.dart';
 
 class DriverReviewsManagement extends StatefulWidget {
   const DriverReviewsManagement(

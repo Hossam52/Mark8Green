@@ -1,12 +1,12 @@
-import 'package:driver_app/general_commponent/components.dart';
-import 'package:driver_app/general_commponent/default_button.dart';
+import 'package:common_widgets/build_icon.dart';
+import 'package:flutter/material.dart';
+import 'package:common_widgets/default_button.dart';
 import 'package:driver_app/presentation/resourses/assets_manager.dart';
 import 'package:driver_app/presentation/resourses/color_manager.dart';
 import 'package:driver_app/presentation/resourses/styles_manager.dart';
-import 'package:driver_app/widgets/cancel_Item.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:common_widgets/cancel_Item.dart';
 
 class SettinsgScreen extends StatefulWidget {
   const SettinsgScreen({Key? key}) : super(key: key);
@@ -80,11 +80,11 @@ class _SettinsgScreenState extends State<SettinsgScreen> {
           ListTile(
             title: Text(title, style: getRegularStyle(fontSize: 18)),
             onTap: onPressed,
-            leading: buildIcon(imagePath, size: 23.w),
+            leading: BuildIcon(path: imagePath, size: 23.w),
             contentPadding: const EdgeInsets.all(0),
             trailing: trailing,
           ),
-          divider(color: ColorManager.lightGrey),
+          Divider(color: ColorManager.lightGrey),
         ],
       ),
     );

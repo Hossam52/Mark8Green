@@ -39,6 +39,12 @@ dependencies:
   device_preview: ^0.8.0
   intl: any
 
+  common_widgets:
+    # path: ./packages/common_widgets
+    git:
+      url: https://github.com/Hossam52/common_widgets.git
+      ref: master
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

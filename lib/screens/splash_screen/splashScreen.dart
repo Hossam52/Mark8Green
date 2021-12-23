@@ -1,9 +1,7 @@
 import 'dart:async';
-import 'package:driver_app/presentation/resourses/assets_manager.dart';
-import 'package:driver_app/screens/home/home_screen.dart';
-import 'package:driver_app/screens/login/login_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:driver_app/presentation/resourses/assets_manager.dart';
+import 'package:driver_app/screens/login/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

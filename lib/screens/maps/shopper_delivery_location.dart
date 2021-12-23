@@ -1,5 +1,5 @@
-import 'package:driver_app/presentation/resourses/styles_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:driver_app/presentation/resourses/styles_manager.dart';
 
 AppBar _appBar(BuildContext context, String title,
     {Color backgroundColor = Colors.transparent}) {

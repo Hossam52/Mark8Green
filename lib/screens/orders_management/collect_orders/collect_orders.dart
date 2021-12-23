@@ -1,25 +1,17 @@
-import 'package:driver_app/general_commponent/colors.dart';
-import 'package:driver_app/general_commponent/components.dart';
-import 'package:driver_app/general_commponent/default_button.dart';
-import 'package:driver_app/models/company_model.dart';
-import 'package:driver_app/models/driver_model.dart';
-import 'package:driver_app/models/morag3at_model.dart';
-import 'package:driver_app/models/review_model.dart';
-import 'package:driver_app/models/vehicle_model.dart';
+import 'package:common_widgets/build_icon.dart';
+import 'package:flutter/material.dart';
 import 'package:driver_app/presentation/resourses/assets_manager.dart';
 import 'package:driver_app/presentation/resourses/color_manager.dart';
 import 'package:driver_app/presentation/resourses/styles_manager.dart';
 import 'package:driver_app/screens/maps/store_map_locations.dart';
-import 'package:driver_app/screens/orders_management/deliver_orders/delivery_page.dart';
-import 'package:driver_app/screens/profiles/driver_profile/driver_profile_management.dart';
-import 'package:driver_app/widgets/card_widget.dart';
-import 'package:driver_app/widgets/custom_toggle_buttons.dart';
-import 'package:driver_app/widgets/image_rounded.dart';
-import 'package:driver_app/widgets/orders_view.dart';
-import 'package:driver_app/widgets/store_owner_widget.dart';
-import 'package:driver_app/widgets/table_data_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:common_widgets/card_widget.dart';
+import 'package:common_widgets/image_rounded.dart';
+import 'package:common_widgets/orders_view.dart';
+import 'package:common_widgets/table_data_widget.dart';
+import 'package:driver_app/general_commponent/components.dart';
+import 'package:common_widgets/components.dart';
+import 'package:common_widgets/recieving_table.dart';
+import 'package:common_widgets/confirm_arrival.dart';
 
 class CollectOrders extends StatefulWidget {
   const CollectOrders({Key? key}) : super(key: key);
@@ -148,27 +140,32 @@ class _CollectOrdersState extends State<CollectOrders> {
   Widget _arrived() {
     return Column(
       children: [
-        ConfimrArrival(),
+        ConfimrArrival(
+          arrivalTime: '12:30 AM 15/9/2021',
+        ),
         Divider(),
       ],
     );
   }
 
   Widget _recievingOrderData() {
-    final List<TableRowItem> _invoiceData = [
-      TableRowItem(title: 'Order number', widget: Text('#5544123699')),
-      TableRowItem(title: 'Discount', widget: Text('5')),
-      TableRowItem(title: 'Order commision', widget: Text('1 JD')),
-      TableRowItem(title: 'Total order price', widget: Text('94 JD')),
-      TableRowItem(
-          title: 'Payment method',
-          widget: buildIcon('asset/images/cash.png', size: 30.r)),
-    ];
+    // final List<TableRowItem> _invoiceData = [
+    //   TableRowItem(title: 'Order number', widget: Text('#5544123699')),
+    //   TableRowItem(title: 'Discount', widget: Text('5')),
+    //   TableRowItem(title: 'Order commision', widget: Text('1 JD')),
+    //   TableRowItem(title: 'Total order price', widget: Text('94 JD')),
+    //   TableRowItem(
+    //       title: 'Payment method',
+    //       widget: BuildIcon(path:'asset/images/cash.png', size: 30.r)),
+    // ];
+    final List<TableRowItem> _invoiceData = invoiceData(
+        id: '5544123699', discount: 5, commission: 1, totalPrice: 94);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Shopping invoice', style: getSemiBoldStyle(fontSize: 16)),
         RecievingTableWidget(
+          time: '12:30 AM 15/9/2021',
           onPayInvoicePressed: () {},
           tableData: _invoiceData,
           onConfirmPressed: () {},
@@ -199,7 +196,7 @@ class _ShopperIdentity extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: getRegularStyle())),
-          Expanded(flex: 3, child: buildIcon(ImageAssets.phoneIcon))
+          Expanded(flex: 3, child: BuildIcon(path: ImageAssets.phoneIcon))
         ]),
       ),
     );
@@ -234,12 +231,12 @@ class _BuyerIdentity extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        InkWell(onTap: () {}, child: buildIcon(ImageAssets.phoneIcon)),
+        InkWell(onTap: () {}, child: BuildIcon(path: ImageAssets.phoneIcon)),
         InkWell(
             onTap: () {
               To(context, StoreMapLocation());
             },
-            child: buildIcon(ImageAssets.mapIcon)),
+            child: BuildIcon(path: ImageAssets.mapIcon)),
       ],
     );
   }

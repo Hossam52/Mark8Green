@@ -1,12 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:driver_app/presentation/resourses/assets_manager.dart';
 import 'package:driver_app/presentation/resourses/color_manager.dart';
 import 'package:driver_app/presentation/resourses/styles_manager.dart';
-import 'package:driver_app/widgets/card_widget.dart';
-import 'package:driver_app/widgets/custom_toggle_buttons.dart';
-import 'package:driver_app/widgets/image_rounded.dart';
-import 'package:driver_app/widgets/market_item.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:common_widgets/custom_toggle_buttons.dart';
+import 'package:common_widgets/market_item.dart';
 
 class TodayWork extends StatelessWidget {
   const TodayWork({Key? key}) : super(key: key);

@@ -1,10 +1,10 @@
 import 'dart:math';
 
-import 'package:driver_app/presentation/resourses/color_manager.dart';
-import 'package:driver_app/presentation/resourses/styles_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart' as intl;
+import 'package:driver_app/presentation/resourses/color_manager.dart';
+import 'package:driver_app/presentation/resourses/styles_manager.dart';
 
 class WeekMissions extends StatelessWidget {
   const WeekMissions({Key? key}) : super(key: key);
@@ -196,6 +196,7 @@ class _DateItem extends StatelessWidget {
             ),
           ),
           Expanded(
+            flex: 2,
             child: Text(
               dayNumber,
               style: getRegularStyle(fontSize: 19, color: fontColor),

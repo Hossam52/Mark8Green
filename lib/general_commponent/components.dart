@@ -1,6 +1,7 @@
 import 'package:driver_app/presentation/resourses/styles_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:common_widgets/accuracy_good_bad.dart';
 
 import 'colors.dart';
 
@@ -145,7 +146,7 @@ Widget buildRow(
       ],
     );
 
-Widget ratingRow(String title, String val1, String val2) => Column(
+Widget ratingRow(String title, double val1, double val2) => Column(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -154,41 +155,10 @@ Widget ratingRow(String title, String val1, String val2) => Column(
             children: [
               Expanded(child: Text(title, style: getRegularStyle())),
               Expanded(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
-                  // height: 38.h,
-                  // width: 180.w,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey),
-                    //color: Colors.white,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          val1,
-                          style: getBoldStyle(
-                            fontSize: 14,
-                            color: Colors.red,
-                          ),
-                        ),
-                      ),
-                      VerticalDivider(),
-                      Expanded(
-                        child: Text(
-                          val2,
-                          style: getBoldStyle(
-                            fontSize: 14,
-                            color: Colors.green,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+                  child: AccuracyGoodBad(
+                goodValue: val1,
+                badValue: val2,
+              )),
             ],
           ),
         ),

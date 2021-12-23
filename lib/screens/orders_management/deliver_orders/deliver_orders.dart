@@ -1,18 +1,17 @@
-import 'package:driver_app/general_commponent/components.dart';
-import 'package:driver_app/general_commponent/default_button.dart';
-import 'package:driver_app/presentation/resourses/assets_manager.dart';
-import 'package:driver_app/presentation/resourses/color_manager.dart';
-import 'package:driver_app/presentation/resourses/styles_manager.dart';
-import 'package:driver_app/screens/maps/shopper_delivery_location.dart';
-import 'package:driver_app/screens/orders_management/deliver_orders/delivery_page.dart';
-import 'package:driver_app/widgets/border_container_light.dart';
-import 'package:driver_app/widgets/custom_stepper.dart';
-import 'package:driver_app/widgets/custom_toggle_buttons.dart';
-import 'package:driver_app/widgets/image_rounded.dart';
-import 'package:driver_app/widgets/orders_view.dart';
-import 'package:driver_app/widgets/table_data_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:driver_app/general_commponent/components.dart';
+import 'package:driver_app/presentation/resourses/assets_manager.dart';
+import 'package:driver_app/presentation/resourses/styles_manager.dart';
+import 'package:driver_app/screens/maps/shopper_delivery_location.dart';
+import 'package:common_widgets/custom_stepper.dart';
+import 'package:common_widgets/image_rounded.dart';
+import 'package:common_widgets/orders_view.dart';
+import 'package:common_widgets/table_data_widget.dart';
+import 'package:common_widgets/build_icon.dart';
+import 'package:common_widgets/components.dart';
+import 'package:common_widgets/recieving_table.dart';
+import 'package:common_widgets/confirm_arrival.dart';
 
 class DeliverOrders extends StatefulWidget {
   DeliverOrders({Key? key}) : super(key: key);
@@ -63,7 +62,12 @@ class _DeliverOrdersState extends State<DeliverOrders> {
 
   Widget _confirmArrival() {
     return Column(
-      children: [ConfimrArrival(), Divider()],
+      children: [
+        ConfimrArrival(
+          arrivalTime: '12:30 AM 15/9/2021',
+        ),
+        Divider()
+      ],
     );
   }
 }
@@ -97,12 +101,12 @@ class _ShopperIdentity extends StatelessWidget {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          buildIcon(ImageAssets.phoneIcon),
+          BuildIcon(path: ImageAssets.phoneIcon),
           InkWell(
               onTap: () {
                 To(context, ShopperDeliveryLocation());
               },
-              child: buildIcon(ImageAssets.mapIcon)),
+              child: BuildIcon(path: ImageAssets.mapIcon)),
         ],
       );
     });
@@ -177,18 +181,21 @@ class _InvoiceDetailsState extends State<_InvoiceDetails> {
 class _PurchaseStepperItem extends StatelessWidget {
   _PurchaseStepperItem({Key? key}) : super(key: key);
 
-  final List<TableRowItem> _purchaseTableRows = [
-    TableRowItem(title: 'Order number', widget: Text('#5544123699')),
-    TableRowItem(title: 'Discount', widget: Text('5')),
-    TableRowItem(title: 'Order commision', widget: Text('1 JD')),
-    TableRowItem(title: 'Total order price', widget: Text('94 JD')),
-    TableRowItem(
-        title: 'Payment method',
-        widget: buildIcon('asset/images/cash.png', size: 30.r)),
-  ];
+  // final List<TableRowItem> _purchaseTableRows = [
+  //   TableRowItem(title: 'Order number', widget: Text('#5544123699')),
+  //   TableRowItem(title: 'Discount', widget: Text('5')),
+  //   TableRowItem(title: 'Order commision', widget: Text('1 JD')),
+  //   TableRowItem(title: 'Total order price', widget: Text('94 JD')),
+  //   TableRowItem(
+  //       title: 'Payment method',
+  //       widget: buildIcon('asset/images/cash.png', size: 30.r)),
+  // ];
+  final List<TableRowItem> _purchaseTableRows =
+      invoiceData(id: '5544123699', discount: 5, commission: 1, totalPrice: 94);
   @override
   Widget build(BuildContext context) {
     return RecievingTableWidget(
+        time: '12:30 AM 15/9/2021',
         tableData: _purchaseTableRows,
         onPayInvoicePressed: () {},
         onConfirmPressed: () => _confirmPurchase(context));
@@ -216,11 +223,12 @@ class _DeliveryStepperItem extends StatelessWidget {
     TableRowItem(title: 'Total price', widget: Text('2 JD')),
     TableRowItem(
         title: 'Payment method',
-        widget: buildIcon('asset/images/cash.png', size: 30.r)),
+        widget: BuildIcon(path: 'asset/images/cash.png', size: 30.r)),
   ];
   @override
   Widget build(BuildContext context) {
     return RecievingTableWidget(
+      time: '12:30 AM 15/9/2021',
       onPayInvoicePressed: () {},
       tableData: _deliveryTableRows,
       onConfirmPressed: onConfirmPressed,

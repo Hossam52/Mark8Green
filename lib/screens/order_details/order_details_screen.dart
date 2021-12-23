@@ -1,12 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:driver_app/general_commponent/components.dart';
 import 'package:driver_app/presentation/resourses/assets_manager.dart';
 import 'package:driver_app/presentation/resourses/color_manager.dart';
 import 'package:driver_app/presentation/resourses/styles_manager.dart';
-import 'package:driver_app/widgets/appbar_with_ToggleButtons.dart';
-import 'package:driver_app/widgets/card_widget.dart';
-import 'package:driver_app/widgets/market_item.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:common_widgets/card_widget.dart';
+import 'package:common_widgets/market_item.dart';
 
 class OrderDetailsScreen extends StatelessWidget {
   const OrderDetailsScreen({Key? key}) : super(key: key);
@@ -19,7 +18,7 @@ class OrderDetailsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _CustomAppBar(
-              id: '52245817289',
+              id: '5224581729',
               title: 'Order details',
             ),
             Padding(

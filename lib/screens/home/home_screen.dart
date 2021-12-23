@@ -1,12 +1,10 @@
-import 'package:driver_app/general_commponent/colors.dart';
+import 'package:flutter/material.dart';
 import 'package:driver_app/models/driver_model.dart';
 import 'package:driver_app/presentation/resourses/assets_manager.dart';
 import 'package:driver_app/screens/delivery_management/delivery_management.dart';
 import 'package:driver_app/screens/orders_management/orders_management.dart';
 import 'package:driver_app/screens/profiles/driver_profile/driver_profile_management.dart';
-import 'package:driver_app/screens/profiles/personal/profile_screen.dart';
 import 'package:driver_app/screens/settings/settings_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatefulWidget {

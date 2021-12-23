@@ -1,22 +1,12 @@
-import 'dart:math';
-
-import 'package:driver_app/general_commponent/colors.dart';
-import 'package:driver_app/general_commponent/components.dart';
-import 'package:driver_app/general_commponent/default_button.dart';
-import 'package:driver_app/presentation/resourses/color_manager.dart';
-import 'package:driver_app/presentation/resourses/styles_manager.dart';
-import 'package:driver_app/screens/order_details/order_details_management.dart';
-import 'package:driver_app/widgets/border_container_light.dart';
-import 'package:driver_app/widgets/card_widget.dart';
-import 'package:driver_app/widgets/custom_stepper.dart';
-import 'package:driver_app/widgets/custom_toggle_buttons.dart';
-import 'package:driver_app/widgets/image_rounded.dart';
-import 'package:driver_app/widgets/orders_view.dart';
-import 'package:driver_app/widgets/store_owner_widget.dart';
-import 'package:driver_app/widgets/table_data_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:timelines/timelines.dart';
+
+import 'package:driver_app/presentation/resourses/styles_manager.dart';
+import 'package:driver_app/general_commponent/components.dart';
+import 'package:driver_app/screens/order_details/order_details_management.dart';
+import 'package:common_widgets/orders_view.dart';
+import 'package:common_widgets/table_data_widget.dart';
+import 'package:common_widgets/default_button.dart';
+import 'package:common_widgets/image_rounded.dart';
 
 class RecieveOrders extends StatefulWidget {
   RecieveOrders({Key? key}) : super(key: key);

@@ -1,5 +1,6 @@
+import 'package:common_widgets/morag3at_model.dart';
 import 'package:driver_app/models/company_model.dart';
-import 'package:driver_app/models/morag3at_model.dart';
+// import 'package:driver_app/models/morag3at_model.dart';
 import 'package:driver_app/models/review_model.dart';
 import 'package:driver_app/models/vehicle_model.dart';
 

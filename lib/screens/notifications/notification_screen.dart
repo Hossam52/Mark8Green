@@ -38,7 +38,7 @@ class NotificationScreen extends StatelessWidget {
             DefaultButton(
                 onPressed: () {},
                 background: Theme.of(context).primaryColor,
-                text: 'Delete all'),
+                text: 'See all'),
             SizedBox(height: 20)
           ],
         ),

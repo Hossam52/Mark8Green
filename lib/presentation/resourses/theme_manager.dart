@@ -11,7 +11,7 @@ ThemeData getApplicationTheme() {
     primaryColorLight: ColorManager.primaryOpacity70,
     primaryColorDark: ColorManager.darkPrimary,
     disabledColor: ColorManager.grey1,
-    colorScheme: ColorScheme.fromSwatch(accentColor: ColorManager.grey),
+    colorScheme: ColorScheme.fromSwatch(accentColor: Colors.black),
 
     splashColor: ColorManager.primaryOpacity70,
     //Card Theme
@@ -48,12 +48,14 @@ ThemeData getApplicationTheme() {
     ),
     // TextTheme
     textTheme: TextTheme(
-        headline1: getSemiBoldStyle(
-            color: ColorManager.darkGrey, fontSize: FontSize.s16),
-        subtitle1: getMediumStyle(
-            color: ColorManager.lightGrey, fontSize: FontSize.s14),
-        caption: getRegularStyle(color: ColorManager.grey1),
-        bodyText1: getRegularStyle(color: ColorManager.grey)),
+      headline1: getSemiBoldStyle(
+          color: ColorManager.darkGrey, fontSize: FontSize.s16),
+      subtitle1:
+          getMediumStyle(color: ColorManager.lightGrey, fontSize: FontSize.s14),
+      caption: getRegularStyle(color: ColorManager.grey1),
+      bodyText1: getRegularStyle(fontSize: 13),
+      bodyText2: getRegularStyle(fontSize: 18),
+    ),
     //Input decoration theme
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: const EdgeInsets.all(AppPadding.p8),
